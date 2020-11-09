@@ -171,12 +171,6 @@ i {
 }
 
 @media (max-width: 400px) {
-  .bg-danger {
-    border-radius: 0px;
-    width: 0px;
-    height: 0px;
-    margin-right: 0px;
-  }
   .buttuns2 > .btn1 {
     margin: 5px 0;
     width: 100%;
