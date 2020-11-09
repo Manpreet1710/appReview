@@ -11,7 +11,6 @@ const Review = [
     reviewText: 'Excellent application for works in pdf format',
     reviewUserName: 'Alice6',
   },
-
   {
     id: 2,
     appID: 'com.flipkart',

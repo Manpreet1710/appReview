@@ -5,6 +5,8 @@ import {
   Col,
   Form,
   FormControl,
+  DropdownButton,
+  Dropdown,
 } from '../../node_modules/react-bootstrap'
 import Main from './Main'
 import StarRating from './StarRating'
@@ -17,16 +19,24 @@ const Sidebar = () => {
   const [search, setSearchItem] = useState('')
   const [posts, setPosts] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
-  const [postPerPage, setPostPerPage] = useState(10)
+  const [postPerPage] = useState(10)
 
   function InputEvent(event) {
     setSearchItem(event.target.value)
   }
 
   useEffect(() => {
-    let result = Review.filter((item) =>
-      item.appStoreName.toLowerCase().includes(search.toLowerCase())
+    let result = Review.filter(
+      (item) =>
+        item.appStoreName.toLowerCase().includes(search.toLowerCase()) ||
+        item.reviewHeading.toLowerCase().includes(search.toLowerCase()) ||
+        item.rating.toLowerCase().includes(search.toLowerCase()) ||
+        item.reviewText.toLowerCase().includes(search.toLowerCase()) ||
+        item.reviewUserName.toLowerCase().includes(search.toLowerCase()) ||
+        item.countryName.toLowerCase().includes(search.toLowerCase()) ||
+        item.version.toLowerCase().includes(search.toLowerCase())
     )
+
     setPosts(result)
   }, [search])
 
@@ -53,11 +63,11 @@ const Sidebar = () => {
                 />
               </Form>
               <br />
-
-              <button className='btn text-left'>
-                all time
-                <i className='fas fa-angle-down text-dark icon'></i>
-              </button>
+              <DropdownButton id='dropdown-edit' title='All'>
+                <Dropdown.Item href='#/action-1'>My App + 3</Dropdown.Item>
+                <Dropdown.Item href='#/action-2'>My App + 4</Dropdown.Item>
+                <Dropdown.Item href='#/action-3'>My App + 5</Dropdown.Item>
+              </DropdownButton>
               <h6 className='mt-3'>filtering by rating</h6>
               <StarRating reviewDt={Review} />
               <h6 className='mt-3'>filtering by version</h6>

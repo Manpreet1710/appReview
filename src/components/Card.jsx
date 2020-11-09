@@ -1,5 +1,9 @@
 import React from 'react'
-import { Container, Jumbotron } from '../../node_modules/react-bootstrap'
+import {
+  Container,
+  Jumbotron,
+  NavLink,
+} from '../../node_modules/react-bootstrap'
 import Rating from './Rating'
 
 const Card = ({ review }) => {
@@ -16,9 +20,9 @@ const Card = ({ review }) => {
           <p className='mt-2'>{review.reviewText}</p>
           <div className='flex2'>
             <div className='reviews'>
-              <a>By {review.reviewUserName}</a>
-              <a className='name'>{review.version}</a>
-              <a className='name'>{review.countryName}</a>
+              <NavLink>By {review.reviewUserName}</NavLink>
+              <NavLink className='name'>{review.version}</NavLink>
+              <NavLink className='name'>{review.countryName}</NavLink>
             </div>
             <div className='buttons'>
               <button>reply</button>

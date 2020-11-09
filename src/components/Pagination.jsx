@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-bootstrap'
 
 const Pagination = ({ postPerPage, totalPosts, paginate }) => {
   const pageNumbers = []
@@ -12,13 +13,13 @@ const Pagination = ({ postPerPage, totalPosts, paginate }) => {
         <ul className='pagination'>
           {pageNumbers.map((number) => (
             <li key={number} className='page-item'>
-              <a
+              <NavLink
                 onClick={() => paginate(number)}
                 href='#'
                 className='page-link'
               >
                 {number}
-              </a>
+              </NavLink>
             </li>
           ))}
         </ul>

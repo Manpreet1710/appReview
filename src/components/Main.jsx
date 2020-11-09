@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Card from './Card'
 
 const Main = ({ currentPosts }) => {
-  console.log(currentPosts)
   return (
     <>
       <div className='viewingReviews'>
@@ -20,8 +19,8 @@ const Main = ({ currentPosts }) => {
         </div>
       </div>
 
-      {currentPosts.map((post) => {
-        return <Card review={post} />
+      {currentPosts.map((post, ind) => {
+        return <Card key={ind} review={post} />
       })}
     </>
   )
