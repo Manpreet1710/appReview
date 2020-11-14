@@ -1,36 +1,64 @@
 import React from 'react'
 
 const FilterByCountry = ({ reviewDt }) => {
-  const C1 = reviewDt.filter((item) => item.countryName === 'US').length
-  const C2 = reviewDt.filter((item) => item.countryName === 'India').length
-  const C3 = reviewDt.filter((item) => item.countryName === 'Germany').length
-  const C4 = reviewDt.filter((item) => item.countryName === 'Japan').length
+  const C1 = reviewDt.filter((item) => item.countryName === 'Australia').length
+  const C2 = reviewDt.filter((item) => item.countryName === 'France').length
+  const C3 = reviewDt.filter((item) => item.countryName === 'US').length
+  const C4 = reviewDt.filter((item) => item.countryName === 'Germany').length
+  const C5 = reviewDt.filter((item) => item.countryName === 'Russia').length
+  const C6 = reviewDt.filter((item) => item.countryName === 'Japan').length
+  const C7 = reviewDt.filter((item) => item.countryName === 'UK').length
+  const C8 = reviewDt.filter((item) => item.countryName === 'India').length
   return (
     <>
       <div className='row'>
         <div className='col-md-10 col-6'>
-          <span>United States</span>
+          <span>Australia</span>
         </div>
         <div className='col-md-2  col-6 text-right'>
           <span>{C1}</span>
         </div>
         <div className='col-md-10 col-6'>
-          <span>India</span>
+          <span>France</span>
         </div>
         <div className='col-md-2 col-6 text-right'>
           <span>{C2}</span>
         </div>
         <div className='col-md-10 col-6'>
-          <span>Germany</span>
+          <span>US</span>
         </div>
         <div className='col-md-2 col-6 text-right'>
           <span>{C3}</span>
         </div>
         <div className='col-md-10 col-6'>
-          <span>Japan</span>
+          <span>Germany</span>
         </div>
         <div className='col-md-2  col-6 text-right'>
           <span>{C4}</span>
+        </div>
+        <div className='col-md-10 col-6'>
+          <span>Russia</span>
+        </div>
+        <div className='col-md-2  col-6 text-right'>
+          <span>{C5}</span>
+        </div>
+        <div className='col-md-10 col-6'>
+          <span>Japan</span>
+        </div>
+        <div className='col-md-2  col-6 text-right'>
+          <span>{C6}</span>
+        </div>
+        <div className='col-md-10 col-6'>
+          <span>UK</span>
+        </div>
+        <div className='col-md-2  col-6 text-right'>
+          <span>{C7}</span>
+        </div>
+        <div className='col-md-10 col-6'>
+          <span>India</span>
+        </div>
+        <div className='col-md-2  col-6 text-right'>
+          <span>{C8}</span>
         </div>
       </div>
     </>

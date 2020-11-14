@@ -130,7 +130,7 @@ nav {
 }
 .reviews {
   display: flex;
-  width: 160px;
+  width: 300px;
   justify-content: space-between;
 }
 .reviews > a {
@@ -169,6 +169,11 @@ i {
 .pagination li {
   margin: 5px 5px;
 }
+.fa,
+.far,
+.fas {
+  font-size: 0.8rem;
+}
 
 @media (max-width: 400px) {
   .buttuns2 > .btn1 {
@@ -185,14 +190,13 @@ i {
   .jumbotron {
     padding: 1.5rem 1rem;
   }
-  .fa,
-  .far,
-  .fas {
-    font-size: 0.8rem;
-  }
+
   .flex,
   .flex2 {
     font-size: 0.7rem !important;
+  }
+  .reviews {
+    width: 200px;
   }
 }
 @media (min-width: 576px) {

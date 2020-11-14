@@ -14,7 +14,6 @@ import FilterByVersion from './FilterByVersion'
 import FilterByCountry from './FilterByCountry'
 import Review from '../Review'
 import Pagination from './Pagination'
-
 const Sidebar = () => {
   const [search, setSearchItem] = useState('')
   const [posts, setPosts] = useState([])
@@ -36,7 +35,6 @@ const Sidebar = () => {
         item.countryName.toLowerCase().includes(search.toLowerCase()) ||
         item.version.toLowerCase().includes(search.toLowerCase())
     )
-
     setPosts(result)
   }, [search])
 
@@ -47,6 +45,7 @@ const Sidebar = () => {
 
   // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber)
+
   return (
     <>
       <Container>
@@ -63,10 +62,11 @@ const Sidebar = () => {
                 />
               </Form>
               <br />
-              <DropdownButton id='dropdown-edit' title='All'>
-                <Dropdown.Item href='#/action-1'>My App + 3</Dropdown.Item>
-                <Dropdown.Item href='#/action-2'>My App + 4</Dropdown.Item>
-                <Dropdown.Item href='#/action-3'>My App + 5</Dropdown.Item>
+              <DropdownButton id='dropdown-edit' title='This Month'>
+                <Dropdown.Item href='#/action-1'>All time</Dropdown.Item>
+                <Dropdown.Item href='#/action-2'>This week</Dropdown.Item>
+                <Dropdown.Item href='#/action-3'>This month</Dropdown.Item>
+                <Dropdown.Item href='#/action-3'>This year</Dropdown.Item>
               </DropdownButton>
               <h6 className='mt-3'>filtering by rating</h6>
               <StarRating reviewDt={Review} />
