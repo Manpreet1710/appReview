@@ -1,17 +1,13 @@
 import React, { useState } from 'react'
 
-const StarRating = ({ reviewDt, fiveRating }) => {
-  const [ratingFiveTotal, setRatingFiveTotal] = useState([])
+const StarRating = (props) => {
+  const { reviewDt, starRating } = props
 
-  const ratingFive = reviewDt.filter((item) => item.rating === '5')
-  function starRating() {
-    setRatingFiveTotal(ratingFive)
-    console.log(ratingFiveTotal)
-  }
-  const ratingFour = reviewDt.filter((item) => item.rating === '4')
-  const ratingThree = reviewDt.filter((item) => item.rating === '3')
-  const ratingTwo = reviewDt.filter((item) => item.rating === '2')
-  const ratingOne = reviewDt.filter((item) => item.rating === '1')
+  let ratingFive = reviewDt.filter((item) => item.rating === '5')
+  let ratingFour = reviewDt.filter((item) => item.rating === '4')
+  let ratingThree = reviewDt.filter((item) => item.rating === '3')
+  let ratingTwo = reviewDt.filter((item) => item.rating === '2')
+  let ratingOne = reviewDt.filter((item) => item.rating === '1')
   return (
     <>
       <div className='row'>
@@ -28,7 +24,7 @@ const StarRating = ({ reviewDt, fiveRating }) => {
           <span>{ratingFive.length}</span>
         </div>
 
-        <div className='col-md-10  col-6'>
+        <div className='col-md-10  col-6' onClick={starRating}>
           <span>
             <i className='fa fa-star'></i>
             <i className='fa fa-star'></i>
@@ -37,7 +33,7 @@ const StarRating = ({ reviewDt, fiveRating }) => {
             <i className='far fa-star'></i>
           </span>
         </div>
-        <div className='col-md-2  col-6 text-right'>
+        <div className='col-md-2  col-6 text-right' onClick={starRating}>
           <span>{ratingFour.length}</span>
         </div>
         <div className='col-md-10  col-6'>
@@ -49,7 +45,7 @@ const StarRating = ({ reviewDt, fiveRating }) => {
             <i className='far fa-star'></i>
           </span>
         </div>
-        <div className='col-md-2  col-6 text-right'>
+        <div className='col-md-2  col-6 text-right' onClick={starRating}>
           <span>{ratingThree.length}</span>
         </div>
         <div className='col-md-10  col-6'>
@@ -61,7 +57,7 @@ const StarRating = ({ reviewDt, fiveRating }) => {
             <i className='far fa-star'></i>
           </span>
         </div>
-        <div className='col-md-2  col-6 text-right'>
+        <div className='col-md-2  col-6 text-right' onClick={starRating}>
           <span>{ratingTwo.length}</span>
         </div>
         <div className='col-md-10  col-6'>

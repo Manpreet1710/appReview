@@ -2,10 +2,11 @@ import React from 'react'
 import Card from './Card'
 
 const Main = ({ currentPosts }) => {
+  const totalCurrentPostslen = currentPosts.length
   return (
     <>
       <div className='viewingReviews'>
-        <h6 className='mb-3'>Viewing 1-10 of 157 Reviews</h6>
+        <h6 className='mb-3'>Viewing 1-10 of {totalCurrentPostslen} Reviews</h6>
         <div className='buttuns2'>
           <button className='btn1'>
             <i className='fas fa-bell'></i>

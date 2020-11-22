@@ -7,6 +7,16 @@ import {
 import Rating from './Rating'
 
 const Card = ({ review }) => {
+  const {
+    appStoreName,
+    reviewHeading,
+    rating,
+    reviewText,
+    reviewUserName,
+    reviewDate,
+    version,
+    countryName,
+  } = review
   const daysDifference = (date) =>
     parseInt(Math.round((new Date() - new Date(date)) / (1000 * 60 * 60 * 24)))
 
@@ -32,17 +42,17 @@ const Card = ({ review }) => {
         <Container>
           <div className='flex'>
             <div className='bg-danger'></div>
-            <div className='appStore'>{review.appStoreName}</div>
-            <strong>&nbsp;&nbsp;{review.reviewHeading}</strong>
-            <Rating rating={review.rating} />
+            <div className='appStore'>{appStoreName}</div>
+            <strong>&nbsp;&nbsp;{reviewHeading}</strong>
+            <Rating rating={rating} />
           </div>
-          <p className='mt-2'>{review.reviewText}</p>
+          <p className='mt-2'>{reviewText}</p>
           <div className='flex2'>
             <div className='reviews'>
-              <NavLink>By {review.reviewUserName}</NavLink>
-              <NavLink className='name'>{getDays(review.reviewDate)}</NavLink>
-              <NavLink className='name'>{review.version}</NavLink>
-              <NavLink className='name'>{review.countryName}</NavLink>
+              <NavLink>By {reviewUserName}</NavLink>
+              <NavLink className='name'>{getDays(reviewDate)}</NavLink>
+              <NavLink className='name'>{version}</NavLink>
+              <NavLink className='name'>{countryName}</NavLink>
             </div>
             <div className='buttons'>
               <button>reply</button>

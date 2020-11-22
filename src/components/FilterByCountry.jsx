@@ -1,6 +1,7 @@
 import React from 'react'
 
-const FilterByCountry = ({ reviewDt }) => {
+const FilterByCountry = (props) => {
+  const { reviewDt, filterCountry } = props
   const C1 = reviewDt.filter((item) => item.countryName === 'Australia').length
   const C2 = reviewDt.filter((item) => item.countryName === 'France').length
   const C3 = reviewDt.filter((item) => item.countryName === 'US').length
@@ -12,7 +13,7 @@ const FilterByCountry = ({ reviewDt }) => {
   return (
     <>
       <div className='row'>
-        <div className='col-md-10 col-6'>
+        <div className='col-md-10 col-6' onClick={filterCountry}>
           <span>Australia</span>
         </div>
         <div className='col-md-2  col-6 text-right'>
