@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/appReview/static/css/main.e9219f78.chunk.css",
-    "main.js": "/appReview/static/js/main.1ef14a96.chunk.js",
-    "main.js.map": "/appReview/static/js/main.1ef14a96.chunk.js.map",
+    "main.css": "/appReview/static/css/main.26e01d1e.chunk.css",
+    "main.js": "/appReview/static/js/main.d1511c4d.chunk.js",
+    "main.js.map": "/appReview/static/js/main.d1511c4d.chunk.js.map",
     "runtime-main.js": "/appReview/static/js/runtime-main.f35776ae.js",
     "runtime-main.js.map": "/appReview/static/js/runtime-main.f35776ae.js.map",
     "static/css/2.20aa2d7b.chunk.css": "/appReview/static/css/2.20aa2d7b.chunk.css",
@@ -10,14 +10,14 @@
     "static/js/2.d5d41479.chunk.js.map": "/appReview/static/js/2.d5d41479.chunk.js.map",
     "index.html": "/appReview/index.html",
     "static/css/2.20aa2d7b.chunk.css.map": "/appReview/static/css/2.20aa2d7b.chunk.css.map",
-    "static/css/main.e9219f78.chunk.css.map": "/appReview/static/css/main.e9219f78.chunk.css.map",
+    "static/css/main.26e01d1e.chunk.css.map": "/appReview/static/css/main.26e01d1e.chunk.css.map",
     "static/js/2.d5d41479.chunk.js.LICENSE.txt": "/appReview/static/js/2.d5d41479.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f35776ae.js",
     "static/css/2.20aa2d7b.chunk.css",
     "static/js/2.d5d41479.chunk.js",
-    "static/css/main.e9219f78.chunk.css",
-    "static/js/main.1ef14a96.chunk.js"
+    "static/css/main.26e01d1e.chunk.css",
+    "static/js/main.d1511c4d.chunk.js"
   ]
 }
