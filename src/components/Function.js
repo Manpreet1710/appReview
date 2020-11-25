@@ -1,5 +1,3 @@
-import React from 'react'
-
 const daysDifference = (date) =>
   parseInt(Math.round((new Date() - new Date(date)) / (1000 * 60 * 60 * 24)))
 

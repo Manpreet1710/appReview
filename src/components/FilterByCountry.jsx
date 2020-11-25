@@ -1,8 +1,8 @@
 import React from 'react'
+import Review from '../Review'
 
 const FilterByCountry = (props) => {
   const {
-    reviewDt,
     filterCountry,
     filterCountry7,
     filterCountry6,
@@ -12,14 +12,14 @@ const FilterByCountry = (props) => {
     filterCountry2,
     filterCountry1,
   } = props
-  const C1 = reviewDt.filter((item) => item.countryName === 'Australia').length
-  const C2 = reviewDt.filter((item) => item.countryName === 'France').length
-  const C3 = reviewDt.filter((item) => item.countryName === 'US').length
-  const C4 = reviewDt.filter((item) => item.countryName === 'Germany').length
-  const C5 = reviewDt.filter((item) => item.countryName === 'Russia').length
-  const C6 = reviewDt.filter((item) => item.countryName === 'Japan').length
-  const C7 = reviewDt.filter((item) => item.countryName === 'UK').length
-  const C8 = reviewDt.filter((item) => item.countryName === 'India').length
+  const C1 = Review.filter((item) => item.countryName === 'Australia').length
+  const C2 = Review.filter((item) => item.countryName === 'France').length
+  const C3 = Review.filter((item) => item.countryName === 'US').length
+  const C4 = Review.filter((item) => item.countryName === 'Germany').length
+  const C5 = Review.filter((item) => item.countryName === 'Russia').length
+  const C6 = Review.filter((item) => item.countryName === 'Japan').length
+  const C7 = Review.filter((item) => item.countryName === 'UK').length
+  const C8 = Review.filter((item) => item.countryName === 'India').length
   return (
     <>
       <div className='row'>

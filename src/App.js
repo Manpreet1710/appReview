@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Review from '../src/Review'
-import { getDays } from './components/Function'
 
 const App = () => {
   const [search, setSearchItem] = useState('')

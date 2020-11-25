@@ -1,8 +1,7 @@
 import React from 'react'
-
+import Review from '../Review'
 const StarRating = (props) => {
   const {
-    reviewDt,
     starRating,
     starRating4,
     starRating3,
@@ -10,11 +9,11 @@ const StarRating = (props) => {
     starRating1,
   } = props
 
-  let ratingFive = reviewDt.filter((item) => item.rating === '5')
-  let ratingFour = reviewDt.filter((item) => item.rating === '4')
-  let ratingThree = reviewDt.filter((item) => item.rating === '3')
-  let ratingTwo = reviewDt.filter((item) => item.rating === '2')
-  let ratingOne = reviewDt.filter((item) => item.rating === '1')
+  let ratingFive = Review.filter((item) => item.rating === '5')
+  let ratingFour = Review.filter((item) => item.rating === '4')
+  let ratingThree = Review.filter((item) => item.rating === '3')
+  let ratingTwo = Review.filter((item) => item.rating === '2')
+  let ratingOne = Review.filter((item) => item.rating === '1')
   return (
     <>
       <div className='row'>

@@ -32,8 +32,9 @@ body {
 .line2 {
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   padding: 15px 8px;
-  height: 530px;
+  overflow-x: hidden;
   overflow-y: scroll;
+  height: 530px;
   position: sticky !important;
   top: 96px;
 }
@@ -111,6 +112,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
+  font-size: 0.9rem;
 }
 
 .appStore {

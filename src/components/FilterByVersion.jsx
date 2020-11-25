@@ -1,8 +1,8 @@
 import React from 'react'
+import Review from '../Review'
 
 const FilterByVersion = (props) => {
   const {
-    reviewDt,
     filterVersion,
     filterVersion6,
     filterVersion5,
@@ -11,13 +11,13 @@ const FilterByVersion = (props) => {
     filterVersion2,
     filterVersion1,
   } = props
-  const V1 = reviewDt.filter((item) => item.version === 'v1.2.1').length
-  const V2 = reviewDt.filter((item) => item.version === 'V1.1').length
-  const V3 = reviewDt.filter((item) => item.version === 'v1.0').length
-  const V4 = reviewDt.filter((item) => item.version === 'V1').length
-  const V5 = reviewDt.filter((item) => item.version === 'v0.1').length
-  const V6 = reviewDt.filter((item) => item.version === '1.3').length
-  const V7 = reviewDt.filter((item) => item.version === '1.2').length
+  const V1 = Review.filter((item) => item.version === 'v1.2.1').length
+  const V2 = Review.filter((item) => item.version === 'V1.1').length
+  const V3 = Review.filter((item) => item.version === 'v1.0').length
+  const V4 = Review.filter((item) => item.version === 'V1').length
+  const V5 = Review.filter((item) => item.version === 'v0.1').length
+  const V6 = Review.filter((item) => item.version === '1.3').length
+  const V7 = Review.filter((item) => item.version === '1.2').length
   return (
     <>
       <div className='row'>
